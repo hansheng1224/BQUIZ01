@@ -1,4 +1,7 @@
 ﻿<?php include "./api/base.php"; ?>
+
+
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <!-- saved from url=(0068)?do=admin&redo=title -->
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -19,10 +22,10 @@
 			<div id="cvr" style="position:absolute; width:99%; height:100%; margin:auto; z-index:9898;"></div>
 		</div>
 	</div>
-	<iframe style="display:none;" name="back" id="back"></iframe>
+	<!-- <iframe style="display:none;" name="back" id="back"></iframe> -->
 	<div id="main">
-		<a title="" href="?">
-			<div class="ti" style="background:url('use/'); background-size:cover;"></div>
+		<a title="<?=$Title->find(['sh'=>1])['text'];?>" href="index.php">
+			<div class="ti" style="background:url('upload/<?=$Title->find(['sh'=>1])['img'];?>'); background-size:cover;"></div>
 			<!--標題-->
 		</a>
 		<div id="ms">
@@ -30,31 +33,31 @@
 				<div id="menuput" class="dbor">
 					<!--主選單放此-->
 					<span class="t botli">後台管理選單</span>
-					<a style="color:#000; font-size:13px; text-decoration:none;" href="./js/js">
+					<a style="color:#000; font-size:13px; text-decoration:none;" href="?do=title">
 						<div class="mainmu">網站標題管理</div>
 				</a>
-				<a style="color:#000; font-size:13px; text-decoration:none;" href="?do=admin&redo=ad">
+				<a style="color:#000; font-size:13px; text-decoration:none;" href="?do=ad">
 					<div class="mainmu">動態文字廣告管理 </div>
 				</a>
-				<a style="color:#000; font-size:13px; text-decoration:none;" href="?do=admin&redo=mvim">
+				<a style="color:#000; font-size:13px; text-decoration:none;" href="?do=mvim">
 					<div class="mainmu">動畫圖片管理 </div>
 				</a>
-				<a style="color:#000; font-size:13px; text-decoration:none;" href="?do=admin&redo=image">
+				<a style="color:#000; font-size:13px; text-decoration:none;" href="?do=image">
 					<div class="mainmu">校園映象資料管理 </div>
 				</a>
-				<a style="color:#000; font-size:13px; text-decoration:none;" href="?do=admin&redo=total">
+				<a style="color:#000; font-size:13px; text-decoration:none;" href="?do=total">
 					<div class="mainmu">進站總人數管理 </div>
 				</a>
-				<a style="color:#000; font-size:13px; text-decoration:none;" href="?do=admin&redo=bottom">
+				<a style="color:#000; font-size:13px; text-decoration:none;" href="?do=bottom">
 					<div class="mainmu">頁尾版權資料管理 </div>
 				</a>
-				<a style="color:#000; font-size:13px; text-decoration:none;" href="?do=admin&redo=news">
+				<a style="color:#000; font-size:13px; text-decoration:none;" href="?do=news">
 					<div class="mainmu">最新消息資料管理 </div>
 				</a>
-				<a style="color:#000; font-size:13px; text-decoration:none;" href="?do=admin&redo=admin">
+				<a style="color:#000; font-size:13px; text-decoration:none;" href="?do=admin">
 					<div class="mainmu">管理者帳號管理 </div>
 				</a>
-				<a style="color:#000; font-size:13px; text-decoration:none;" href="?do=admin&redo=menu">
+				<a style="color:#000; font-size:13px; text-decoration:none;" href="?do=menu">
 					<div class="mainmu">選單管理 </div>
 				</a>
 
@@ -96,6 +99,7 @@
 						$("#alt").show()
 					}
 				)
+
 				$(".sswww").mouseout(
 					function() {
 						$("#alt").hide()
@@ -105,7 +109,7 @@
 		</div>
 		<div style="clear:both;"></div>
 		<div style="width:1024px; left:0px; position:relative; background:#FC3; margin-top:4px; height:123px; display:block;">
-			<span class="t" style="line-height:123px;"></span>
+			<span class="t" style="line-height:123px;"><?=$Bottom->find(1)['bottom'];?></span>
 		</div>
 	</div>
 
