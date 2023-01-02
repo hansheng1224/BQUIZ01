@@ -1,7 +1,7 @@
 <div style="width:99%; height:87%; margin:auto; overflow:auto; border:#666 1px solid;">
     <p class="t cent botli">動態文字廣告管理</p>
     <!-- <form method="post" target="back" action="?do=tii"> -->
-    <form method="post" target="back" action="./api/edit_ad.php">
+    <form method="post" target="back" action="./api/edit.php">
         <table width="100%">
             <tbody>
                 <tr class="yel">
@@ -38,7 +38,10 @@
             <tbody>
                 <tr>
                     <td width="200px"><input type="button" onclick="op('#cover','#cvr','./modal/ad.php')" value="新增動態文字廣告"></td>
-                    <td class="cent"><input type="submit" value="修改確定"><input type="reset" value="重置"></td>
+                    <td class="cent">
+                        <input type="hidden" name="table" value="Ad">
+                        <input type="submit" value="修改確定">
+                        <input type="reset" value="重置"></td>
                 </tr>
             </tbody>
         </table>
