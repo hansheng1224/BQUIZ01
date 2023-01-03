@@ -16,9 +16,13 @@ foreach($_POST['id'] as $idx=>$id){
                 $row['sh']=(isset($_POST['sh']) && $_POST['sh']==$id)?1:0;
             break;
             case "Admin":
+                $row['acc']=$_POST['acc'];
+                $row['pw']=$_POST['pw'];
             break;
             case "menu":
-
+                $row['name']=$_POST['name'];
+                $row['href']=$_POST['href'];
+                $row['sh']=(isset($_POST['sh']) && in_array($id,$_POST['sh']))?1:0;
             break;
             default:
             if(isset($_POST['text'])){

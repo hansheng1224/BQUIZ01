@@ -1,17 +1,17 @@
-<h3>新增動畫圖片</h3>
+h3>新增最新消息資料</h3>
 <hr>
 <form action="./api/add.php" method="post" enctype="multipart/form-data">
     <table>
         <tr>
-            <td>動畫圖片</td>
+            <td>最新消息資料</td>
             <td>
-                <input type="file" name="img" id="">
+                <textarea name="text" id="" cols="30" rows="10"></textarea>
             </td>
         </tr>
     </table>
     <div>
         <input type="submit" value="新增">
-        <input type="hidden" name="table" value="Mvim">
+        <input type="hidden" name="table" value="News">
         <input type="reset" value="重置">
     </div>
 </form>
