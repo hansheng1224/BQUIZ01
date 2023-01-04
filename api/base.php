@@ -114,7 +114,7 @@ class DB{
                 $sql=$sql.$con;
             }
         }
-        echo $sql;
+        // echo $sql;
         return $this->pdo->query($sql)->fetchColumn(); 
     }
     
@@ -176,4 +176,5 @@ $Image=new DB('image');
 $News=new DB('news');
 $Admin=new DB('admin');
 $Menu=new DB('menu');
+$Total=new DB('total');
 ?>

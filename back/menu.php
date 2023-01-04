@@ -2,7 +2,7 @@
     <p class="t cent botli">選單管理</p>
     <!-- <form method="post" target="back" action="?do=tii"> -->
     <form method="post" action="./api/edit.php">
-        <table width="100%">
+        <table width="100%" style="text-align:center">
             <tbody>
                 <tr class="yel">
                     <td width="30%">主選單名稱</td>
@@ -20,12 +20,12 @@
         ?>
                 <tr>
                     <td>
-                        <input type="text" name="name[]" value="<?=$row['name'];?>" id="" style="width:96%">
+                        <input type="text" name="name[]" value="<?=$row['name'];?>" id="" style="width:92%">
                     </td>
                     <td>
-                        <input type="text" name="href[]" value="<?=$row['href'];?>" id="" style="width:96%">
+                        <input type="text" name="href[]" value="<?=$row['href'];?>" id="" style="width: 92%">
                     </td>
-                    <td></td>
+                    <td ><?=$Menu->count(['parent'=>$row['id']]);?></td>
                     <td >
                         <input type="checkbox" name="sh[]" value="<?=$row['id'];?>" id="" <?=$checked;?>>
                     </td>

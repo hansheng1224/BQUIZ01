@@ -2,7 +2,7 @@
 <h3>編輯次選單</h3>
 <hr>
 <form action="./api/submenu.php" method="post" enctype="multipart/form-data">
-    <table>
+    <table id="sub">
         <tr>
             <td>次選單名稱</td>
             <td>次選單連結網址</td>
@@ -19,7 +19,9 @@
             <td>
                 <input type="text" name="href[]" id="" value="<?=$row['href'];?>">
             </td>
-            <td></td>
+            <td>
+                <input type="checkbox" name="del[]" id="" value="<?=$row['id'];?>">
+            </td>
             <input type="hidden" name="id[]" value="<?=$row['id'];?>">
         </tr>
         <?php
@@ -31,5 +33,18 @@
         <input type="hidden" name="parent" value="<?=$_GET['id'];?>">
         <input type="hidden" name="table" value="Menu">
         <input type="reset" value="重置">
+        <input type="button" value="更多次選單" onclick="more()">
+
     </div>
 </form>
+
+<script>
+function more(){
+    let html=`<tr>
+            <td><input type="text" name="add_name[]" id=""></td>
+            <td><input type="text" name="add_href[]" id=""></td>
+            <td></td>
+        </tr>`
+    $("#sub").append(html);
+}
+</script>
