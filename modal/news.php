@@ -1,4 +1,4 @@
-h3>新增最新消息資料</h3>
+<h3>新增最新消息資料</h3>
 <hr>
 <form action="./api/add.php" method="post" enctype="multipart/form-data">
     <table>
