@@ -58,7 +58,7 @@
         </span>
         <ul class="ssaa" style="list-style-type:decimal;">
         <?php
-            $news=$News->all(['sh'=>1],'limit 5');
+            $news=$News->all(['sh'=>1],' limit 5');
             foreach($news as $n){
                 echo "<li>";
                 echo mb_substr($n['text'],0,25)."...";
